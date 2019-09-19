@@ -1,0 +1,63 @@
+<html>
+<head>
+
+<script type="text/javascript">
+	function validate() {
+		var name = document.getElementById("name").value;
+		var login = document.getElementById("login").value;
+		var password = document.getElementById("password").value;
+		if(name == ''){
+			alert("Enter required field name!");
+			return false;
+		}
+		else if(login == ''){
+			alert("Enter required field login!");
+			return false;
+		}
+		else if(password == ''){
+			alert("Enter required field password!");
+			return false;
+		}
+		return true;
+	}
+</script>
+
+<style type="text/css">
+body {
+	text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+	<!-- This element is used to add a comment to an HTML document.  -->
+	<!-- Formulário básico utilizando HTML  -->
+	<form action="SaveUser" method="post" onsubmit="return validate()? true : false">
+		<table style="background: #CFCFCF;">
+			<!-- tr line -->
+			<tr>
+				<!-- <td> cell-->
+				<td><label>Name:</label></td>
+				<td><input type="text" id="name" name="name"
+					style="border-radius: 5px;"></td>
+			</tr>
+
+			<tr>
+				<td><label>Login:</label></td>
+				<td><input type="text" id="login" name="login"
+					style="border-radius: 5px;"></td>
+			</tr>
+
+			<tr>
+				<td><label>Password:</label></td>
+				<td><input type="password" id="password" name="password"
+					style="border-radius: 5px;"></td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" value="save"
+					style="width: 100%; border-radius: 5px;"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
